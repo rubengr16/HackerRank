@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Day1DataTypes {
+public class DataTypes {
 	
     public static void main(String[] args) {
         int i = 4;
