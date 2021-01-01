@@ -1,5 +1,9 @@
 import java.util.*;
-
+/*
+ * Having set up the values of an int i of 4, a double d of 4.0 and a String s of "HackerRank".
+ * Get from input another int and add to i, obtain a second double and add to d and finally,
+ * have a String and concatenate to s (concatenation operator: +).
+ */
 public class DataTypes {
 	
     public static void main(String[] args) {

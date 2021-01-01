@@ -1,13 +1,11 @@
 import java.io.*;
-import java.math.*;
-import java.text.*;
 import java.util.*;
-import java.util.regex.*;
 
 public class SimpleArraySum {
 
     /*
      * Complete the simpleArraySum function below.
+     * Given an array, return the value of adding each of the elements
      */
     static int simpleArraySum(int[] ar) {
         /*
@@ -15,33 +13,30 @@ public class SimpleArraySum {
          */
         int sum = 0;
         for(int i =  0; i < ar.length; i ++) {
-            sum += ar[i];
+            sum += ar[i];  // Adds the elements
         }
         return sum;
     }
 
+    // Scanner creation
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
-
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
-
+        // Reads from input the array's size
         int arCount = Integer.parseInt(scanner.nextLine().trim());
-
+        // Creates the array with the given size
         int[] ar = new int[arCount];
-
+        // Reads the values separated by an space (" ")
         String[] arItems = scanner.nextLine().split(" ");
-
+        // Set the values on their position
         for (int arItr = 0; arItr < arCount; arItr++) {
             int arItem = Integer.parseInt(arItems[arItr].trim());
             ar[arItr] = arItem;
         }
-
+        // simpleArraySum call
         int result = simpleArraySum(ar);
 
-        bufferedWriter.write(String.valueOf(result));
-        bufferedWriter.newLine();
+        System.out.println(result);
 
-        bufferedWriter.close();
     }
 }
