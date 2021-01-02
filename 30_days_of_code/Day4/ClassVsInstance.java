@@ -1,13 +1,19 @@
 import java.io.*;
 import java.util.*;
-
+/*
+ * Create a class Person with an instance variable called age,
+ * a constructor which receives an initialAge and initialises the age variable,
+ * a method amIOld which says "You are young." is your age is lower than 13, 
+ * "You are teenager" is your age is between 13 included and 18 and "You are old." if your age is geater than 18 included,
+ * another
+ */ 
 public class ClassVsInstance {
     public static class Person {
-        private int age;	
+        private int age;  // class variable
       
         public Person(int initialAge) {
-              // Add some more code to run some checks on initialAge
-            if (initialAge < 0) {
+              // Add some more code to run some checks on initialAge, constructor
+            if (initialAge < 0) {  // constraint initialAge is negative
                 System.out.println("Age is not valid, setting age to 0.");
             } else {
                 this.age = initialAge;
