@@ -3,5 +3,5 @@ from __future__ import division
 if __name__ == '__main__':
     a = int(input())
     b = int(input())
-    print(a // b)
-    print(a / b)
+    print(a // b)  # integer division returns integer rounded to the floor
+    print(a / b)  # float divirion returns a float

@@ -4,7 +4,7 @@
 if __name__ == '__main__':
     a = int(input())
     b = int(input())
-    if (1 <= a and a <= (10 ** 10)) and (1 <= b and b <= (10 ** 10)):  # Constraint a and b between 1 and 10 power 10.
+    if (1 <= a and a <= (10 ** 10)) and (1 <= b and b <= (10 ** 10)):  # Constraint a and b between 1 and 10 power 10
         print(a + b)
         print(a - b)
         print(a * b)
