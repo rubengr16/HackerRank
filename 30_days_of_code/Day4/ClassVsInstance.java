@@ -5,7 +5,8 @@ import java.util.*;
  * a constructor which receives an initialAge and initialises the age variable,
  * a method amIOld which says "You are young." is your age is lower than 13, 
  * "You are teenager" is your age is between 13 included and 18 and "You are old." if your age is geater than 18 included,
- * another
+ * another function called yearPasses which increments the age by one.
+ * Constraints: 
  */ 
 public class ClassVsInstance {
     public static class Person {
@@ -22,12 +23,12 @@ public class ClassVsInstance {
     
         public void amIOld() {
               // Write code determining if this person's age is old and print the correct statement:
-           if (this.age < 13) {
+           if (this.age < 13) {  // age is lower than 13
                 System.out.println("You are young.");
            } else {
-               if (18 <= this.age) {
+               if (18 <= this.age) {  // age is greater or equal than 18
                    System.out.println("You are old.");
-               } else {
+               } else {  // Other cases: if age is between 13 included and 18
                    System.out.println("You are a teenager.");
                }
            }
