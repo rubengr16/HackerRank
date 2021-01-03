@@ -14,8 +14,8 @@ public class ClassVsInstance {
       
         public Person(int initialAge) {
               // Add some more code to run some checks on initialAge, constructor
-            if (initialAge < 0) {  // constraint initialAge is negative
-                System.out.println("Age is not valid, setting age to 0.");
+            if (initialAge < 0) {  // Constraint initialAge is negative
+                System.out.println("Age is not valid, setting age to 0.");  // Advice of age changed
             } else {
                 this.age = initialAge;
             }
@@ -41,16 +41,16 @@ public class ClassVsInstance {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int T = sc.nextInt();
+        int T = sc.nextInt();  // Number of ages which will be read
         for (int i = 0; i < T; i++) {
-            int age = sc.nextInt();
-            Person p = new Person(age);
-            p.amIOld();
-            for (int j = 0; j < 3; j++) {
-                p.yearPasses();
+            int age = sc.nextInt();  // Reads new age
+            Person p = new Person(age);  // Calls constructor
+            p.amIOld();  // Calls amIOld method
+            for (int j = 0; j < 3; j++) {  // 3 year passes
+                p.yearPasses();  // Calls yearPasses
             }
             p.amIOld();
-            System.out.println();
+            System.out.println();  // New line
         }
         sc.close();
     }
