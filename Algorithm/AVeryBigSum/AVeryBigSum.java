@@ -1,10 +1,5 @@
 import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.regex.*;
 
 public class AVeryBigSum {
 
@@ -20,16 +15,15 @@ public class AVeryBigSum {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
-
         int arCount = scanner.nextInt();
-        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        //scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
         long[] ar = new long[arCount];
 
         String[] arItems = scanner.nextLine().split(" ");
-        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        //scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
+        System.out.println(arCount);
         for (int i = 0; i < arCount; i++) {
             long arItem = Long.parseLong(arItems[i]);
             ar[i] = arItem;
@@ -37,10 +31,7 @@ public class AVeryBigSum {
 
         long result = aVeryBigSum(ar);
 
-        bufferedWriter.write(String.valueOf(result));
-        bufferedWriter.newLine();
-
-        bufferedWriter.close();
+        System.out.println(result);
 
         scanner.close();
     }
