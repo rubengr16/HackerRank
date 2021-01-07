@@ -2,8 +2,8 @@
 import java.util.*;
 import java.io.*;
 
-class Solution{
-    public static void main(String []argh){
+public class DictionariesAndMaps{
+    public static void main(String []args){
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         Map<String, Integer> map = new HashMap<>();
@@ -24,6 +24,4 @@ class Solution{
         }
         in.close();
     }
-}public class DictionariesAndMaps {
-    
 }
