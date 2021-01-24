@@ -35,7 +35,7 @@ class Student extends Person{
     
     public Student(String firstName, String lastName, int identification, int[] scores) {
         super(firstName, lastName, identification);
-        this.scores = scores;
+        this.testScores = scores;
     }
     
     /*	
@@ -46,10 +46,35 @@ class Student extends Person{
     
     public char calculate(){
         int avg = 0;
-        for(int i = 0; i < scores.length; i++){
-            avg += scores[i];
+        char grade = '\0';
+        int i;
+        for(i = 0; i < testScores.length; i++){
+            avg += testScores[i];
         }
-        if
+        avg /= i;
+        if (avg < 40) {
+            grade = 'T';
+        } else {
+            if (avg < 55) {
+                grade = 'D';
+            } else {
+                if (avg < 70) {
+                    grade = 'P';
+                } else {
+                    if (avg < 80) {
+                        grade = 'A';
+                    } else {
+                        if (avg < 90) {
+                            grade = 'E';
+                        } else {
+                            if (avg <= 100)
+                            grade = 'O';
+                        }
+                    }
+                }
+            }
+        }
+        return grade;
     }
 }
 
